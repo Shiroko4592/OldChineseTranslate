@@ -36,12 +36,9 @@ function speak() {
     return;
   }
 
-  let pronText = '';
-  for (let char of output) {
-    pronText += pronunciation[char] ? pronunciation[char] + ' ' : char;
-  }
+  const pronText = pronunciation[output] || output;
 
   const utter = new SpeechSynthesisUtterance(pronText);
-  utter.lang = 'zh-CN'; // 브라우저 TTS는 현대 중국어로 읽지만 발음 문자열은 상고한어 근사
+  utter.lang = 'en-US'; // zh-CN보다 영어식으로 읽는 게 로마자 발음에 더 자연스러움
   speechSynthesis.speak(utter);
 }
