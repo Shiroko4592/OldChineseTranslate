@@ -37,9 +37,12 @@ function speak() {
   }
 
   const pronText = pronunciation[output] || output;
-
   const utter = new SpeechSynthesisUtterance(pronText);
+
+  const voices = speechSynthesis.getVoices();
+  utter.voice = voices.find(v => v.lang.startsWith('zh-CN')) || null; // 중국어 음성 선택
   utter.lang = 'zh-CN';
-  utter.rate = 0.9; // 살짝 느리게
+  utter.rate = 0.85;
+
   speechSynthesis.speak(utter);
 }
