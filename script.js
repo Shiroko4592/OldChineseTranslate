@@ -40,6 +40,7 @@ function speak() {
   const pronText = pronunciation[output] || output;
 
   const utter = new SpeechSynthesisUtterance(pronText);
-  utter.lang = 'en-US'; // zh-CN보다 영어식으로 읽는 게 로마자 발음에 더 자연스러움
+  utter.lang = 'en-US';
+  utter.rate = 0.9; // 살짝 느리게
   speechSynthesis.speak(utter);
 }
