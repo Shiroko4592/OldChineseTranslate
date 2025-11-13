@@ -10,8 +10,9 @@ const dictionary = {
 // 상고한어 근사 발음(Karlgren식) 사전
 const pronunciation = {
   '凡人生而自由，其尊與權利皆等。人稟天賦理與心，當以兄弟之情相行。': 
-  'bam nyin sreng ne tsi-lu, khi tsun lak gwen-ri kray tang nyin prum khin pha-ri lam sum, tang i khrang lek te sleng sang krang'
+  'bam nyin sreng ne tsi lu. khi tsun lak gwen ri kray tang nyin prum khin pha ri lam sum. tang i khrang lek te sleng sang krang.'
 };
+
 
 function translate() {
   const korean = document.getElementById('korean').value.trim();
