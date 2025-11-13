@@ -1,22 +1,95 @@
+/* 기본 폰트 (Noto Sans SC) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');
+
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Noto Sans SC', sans-serif;
-  padding: 20px;
+  background-color: #000080; /* 네이비 배경 */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+/* 메인 컨테이너 */
+.container {
+  width: 90%;
+  max-width: 480px;
+  background-color: rgba(255, 255, 255, 0.1); /* 반투명 카드 느낌 */
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* 제목 */
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* 입력창 */
 textarea {
   width: 100%;
   height: 100px;
-  font-size: 16px;
-  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 1rem;
+  font-family: 'Noto Sans SC', sans-serif;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
+/* 버튼 */
 button {
-  font-size: 16px;
-  padding: 5px 10px;
-  margin-right: 5px;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e90ff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
+button:hover {
+  background-color: #4682b4;
+}
+
+/* 출력 영역 */
 #output {
-  margin-top: 20px;
-  font-size: 18px;
+  margin-top: 15px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  word-break: break-word;
+}
+
+/* 반응형 (모바일) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  textarea {
+    height: 80px;
+    font-size: 0.95rem;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  #output {
+    font-size: 1.1rem;
+  }
 }
