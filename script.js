@@ -40,7 +40,7 @@ function speak() {
   const pronText = pronunciation[output] || output;
 
   const utter = new SpeechSynthesisUtterance(pronText);
-  utter.lang = 'en-US';
+  utter.lang = 'zh-CN';
   utter.rate = 0.9; // 살짝 느리게
   speechSynthesis.speak(utter);
 }
